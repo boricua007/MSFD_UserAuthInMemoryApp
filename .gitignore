@@ -1,13 +1,45 @@
-bin/
-obj/
+# Build output
+[Bb]in/
+[Oo]bj/
+out/
 
 # User-specific files
 *.user
 *.rsuser
 *.suo
+*.userosscache
+*.sln.docstates
 
-# VS Code settings
+# Visual Studio
+.vs/
+
+# VS Code
 .vscode/
+
+# Rider
+.idea/
 
 # Logs
 *.log
+logs/
+
+# .NET test and coverage
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# NuGet packages cache (if ever restored locally)
+packages/
+*.nupkg
+*.snupkg
+
+# ASP.NET Core publish output
+publish/
+
+# Local app settings overrides (optional machine-specific)
+appsettings.Local.json
+
+# OS files
+.DS_Store
+Thumbs.db
