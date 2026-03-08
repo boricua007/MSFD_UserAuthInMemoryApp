@@ -1,0 +1,13 @@
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log

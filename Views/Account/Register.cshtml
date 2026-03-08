@@ -1,0 +1,25 @@
+@model RegisterViewModel
+
+<form asp-action="Register" method="post" class="registration-form">
+    <h2>Create Account</h2>
+    <div asp-validation-summary="All" class="validation-message"></div>
+
+    <div class="form-row">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" type="email" />
+        <span asp-validation-for="Email" class="validation-message"></span>
+    </div>
+    <div class="form-row">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" />
+        <span asp-validation-for="Password" class="validation-message"></span>
+    </div>
+    <div class="form-row">
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="ConfirmPassword" type="password" />
+        <span asp-validation-for="ConfirmPassword" class="validation-message"></span>
+    </div>
+    <button type="submit">Register</button>
+</form>
+
+<partial name="_ValidationScriptsPartial" />

@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section class="home-hero">
+    <h1>MSFD User Authentication In-Memory App</h1>
+    <p class="home-subtitle">
+        A simple ASP.NET Core MVC project that demonstrates registration, login, and
+        Identity-based authentication using an in-memory database.
+    </p>
+    <div class="home-actions">
+        <a class="home-btn" asp-controller="Account" asp-action="Register">Create Account</a>
+        <a class="home-btn home-btn-secondary" asp-controller="Account" asp-action="Login">Sign In</a>
+        <a class="home-btn home-btn-secondary" asp-controller="Account" asp-action="Users">View Users</a>
+    </div>
+</section>
+
+<section class="home-grid">
+    <article class="home-card">
+        <h2>Project Summary</h2>
+        <p>
+            This ASP.NET Core MVC application demonstrates a basic user authentication workflow
+            using ASP.NET Core Identity with an in-memory databaseto practice core
+            back-end and MVC skills in a focused way.         
+        </p>
+        <ul>
+            <li>Uses ASP.NET Core MVC with Razor views</li>
+            <li>Implements ASP.NET Core Identity for authentication</li>
+            <li>Stores users in-memory for fast local testing</li>
+            <li>Includes styled Register, Login, and Users pages</li>
+        </ul>
+    </article>
+
+    <article class="home-card">
+        <div class="about-header">
+            <img src="https://avatars.githubusercontent.com/boricua007?v=4" alt="Profile Avatar" class="avatar" />
+            <div class="title-block">
+                <h2>About Me</h2>
+                <h5>
+                    GitHub Repo:
+                    <a href="https://github.com/boricua007" target="_blank" rel="noopener noreferrer">
+                        Daisy Viruet-Allen | Boricua007
+                    </a>
+                </h5>
+            </div>
+        </div>
+
+        <div class="markdown-content">
+            <p>
+                Developer in the Microsoft Full-Stack track focused on building practical,
+                user-friendly .NET applications with clean architecture and professional UI.
+            </p>
+            <p>
+                I enjoy learning by building real projects that connect backend fundamentals,
+                authentication workflows, and documentation that is easy to follow.
+            </p>
+            <p>
+                <a href="https://www.linkedin.com/in/daisyviruetallen" target="_blank" rel="noopener noreferrer">
+                    View full About profile
+                </a>
+            </p>
+        </div>
+    </article>
+</section>
+
+<section class="home-card">
+    <h2>What To Try</h2>
+    <ol>
+        <li>Register a new user from the Register page.</li>
+        <li>Sign in using the same credentials on the Login page.</li>
+        <li>Open the Users page to confirm the account is stored in memory.</li>
+    </ol>
+</section>
+
+<section class="home-note">
+    <strong>Note:</strong> This is an in-memory demo, so user data resets when the app restarts.
+</section>

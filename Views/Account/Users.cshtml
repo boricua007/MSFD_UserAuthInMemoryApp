@@ -1,0 +1,32 @@
+@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityUser>
+
+<section class="registration-form users-panel">
+    <h2>Registered Users (In Memory)</h2>
+
+    @if (!Model.Any())
+    {
+        <p class="users-empty">No users registered yet.</p>
+    }
+    else
+    {
+        <div class="users-table-wrap">
+            <table class="users-table">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>User Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.Email</td>
+                        <td>@user.UserName</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    }
+</section>
