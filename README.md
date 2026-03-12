@@ -2,18 +2,33 @@
 
 ## Overview
 
-This ASP.NET Core MVC application demonstrates a basic user authentication workflow
-using ASP.NET Core Identity with an in-memory database. The project focuses on
-core account functionality, including user registration, login, and verification
-of stored users during runtime.
+This ASP.NET Core MVC application demonstrates a basic user authentication workflow using ASP.NET Core Identity with an in-memory database. The project focuses on core account functionality, including user registration, login, and verification of stored users during runtime.
 
-## Technologies Used
+## Features
 
-- .NET 10.0
-- ASP.NET Core MVC
-- ASP.NET Core Identity
-- Entity Framework Core InMemory
-- C#
+✅ ASP.NET Core Identity for secure authentication
+✅ In-memory database for fast, demo-friendly persistence
+✅ Roles & Claims management for fine-grained authorization
+✅ Protected endpoints in RouteController (role/claim-based access)
+✅ MVC architecture with controllers, models, and views
+✅ Bootstrap styling for responsive UI
+
+## Authorization Patterns
+
+| Pattern        | Description                        | Technology         | Benefits                |
+|---------------|------------------------------------|--------------------|-------------------------|
+| Role-Based     | Restrict access by user role        | Identity Roles     | Simple, scalable        |
+| Claims-Based   | Restrict access by user claim       | Identity Claims    | Fine-grained control    |
+| Policy-Based   | Combine roles/claims for endpoints  | AuthorizationPolicy| Flexible, maintainable  |
+
+## RouteController Endpoints
+
+| Endpoint                        | Method | Authorization                | Description                                 |
+|----------------------------------|--------|------------------------------|---------------------------------------------|
+| /route/employee-records          | GET    | HR role                      | Retrieve all employee records               |
+| /route/employee-records          | POST   | ManageEmployeeRecords claim  | Add a new employee record                   |
+| /route/employee-records/{id}     | DELETE | ManageEmployeeRecords claim  | Delete an employee record by ID             |
+
 
 ## Getting Started
 
@@ -50,18 +65,19 @@ of stored users during runtime.
 MSFD_UserAuthInMemoryApp/
 |
 |- Controllers/
-|  |- AccountController.cs
-|  |- HomeController.cs
+|  |- AccountController.cs	# User registration, login, user list
+|  |- HomeController.cs		# Home and privacy pages
+|  |- RouteController.cs	# Role/claim-protected endpoints
 |
 |- Models/
-|  |- ApplicationDbContext.cs
-|  |- RegisterViewModel.cs
-|  |- LoginViewModel.cs
-|  |- ErrorViewModel.cs
+|  |- ApplicationDbContext.cs	# EF Core in-memory context
+|  |- RegisterViewModel.cs		# Registration form model
+|  |- LoginViewModel.cs			# Login form model
+|  |- ErrorViewModel.cs			# Error handling model
 |
 |- Views/
 |  |- Account/
-|  |  |- Register.cshtml
+|  |  |- Register.cshtml	# Register, Login, Users views
 |  |  |- Login.cshtml
 |  |  |- Users.cshtml
 |  |- Home/
@@ -69,7 +85,7 @@ MSFD_UserAuthInMemoryApp/
 |
 |- wwwroot/
 |  |- css/site.css
-|- Program.cs
+|- Program.c				# App entry point, DI, role/claim seeding
 |- appsettings.json
 |- MSFD_UserAuthInMemoryApp.csproj
 ```
@@ -123,12 +139,22 @@ Verification endpoint:
 
 ## Key Concepts Demonstrated
 
-- ASP.NET Core MVC patterns
-- ASP.NET Core Identity fundamentals
-- Model validation with Data Annotations
-- In-memory data provider behavior
-- Razor view and form binding
+- ASP.NET Core MVC Architecture: Clean separation of controllers, models, and views
+- Identity Management: Secure user authentication and role/claim-based authorization
+- Model Validation: Robust input validation using Data Annotations
+- In-Memory Data Provider: Fast, demo-friendly persistence for development and testing
+- Razor Views & Form Binding: Dynamic UI rendering and seamless form handling
+- Protected Endpoints: Practical examples of role- and claim-based access control
 
 ## About
 
 .NET 10 MVC authentication demo built for the Microsoft Back-End Development course as part of the Full-Stack Certification track. This project demonstrates foundational Identity-based auth flows in a simple in-memory setup that is easy to run, test, and extend.
+
+## Author
+
+**Daisy Viruet-Allen (boricua007)**  
+GitHub: [https://github.com/boricua007](https://github.com/boricua007)
+
+---
+
+*This project is part of the Microsoft Full Stack Developer certification coursework.*
