@@ -6,11 +6,11 @@ This ASP.NET Core MVC application demonstrates a basic user authentication workf
 
 ## Features
 
-✅ ASP.NET Core Identity for secure authentication
-✅ In-memory database for fast, demo-friendly persistence
-✅ Roles & Claims management for fine-grained authorization
-✅ Protected endpoints in RouteController (role/claim-based access)
-✅ MVC architecture with controllers, models, and views
+✅ ASP.NET Core Identity for secure authentication  
+✅ In-memory database for fast, demo-friendly persistence  
+✅ Roles & Claims management for fine-grained authorization  
+✅ Protected endpoints in RouteController (role/claim-based access)  
+✅ MVC architecture with controllers, models, and views  
 ✅ Bootstrap styling for responsive UI
 
 ## Authorization Patterns
