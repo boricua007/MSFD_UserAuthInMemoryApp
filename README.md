@@ -13,22 +13,6 @@ This ASP.NET Core MVC application demonstrates a basic user authentication workf
 ✅ MVC architecture with controllers, models, and views  
 ✅ Bootstrap styling for responsive UI
 
-## Authorization Patterns
-
-| Pattern        | Description                        | Technology         | Benefits                |
-|---------------|------------------------------------|--------------------|-------------------------|
-| Role-Based     | Restrict access by user role        | Identity Roles     | Simple, scalable        |
-| Claims-Based   | Restrict access by user claim       | Identity Claims    | Fine-grained control    |
-| Policy-Based   | Combine roles/claims for endpoints  | AuthorizationPolicy| Flexible, maintainable  |
-
-## RouteController Endpoints
-
-| Endpoint                        | Method | Authorization                | Description                                 |
-|----------------------------------|--------|------------------------------|---------------------------------------------|
-| /route/employee-records          | GET    | HR role                      | Retrieve all employee records               |
-| /route/employee-records          | POST   | ManageEmployeeRecords claim  | Add a new employee record                   |
-| /route/employee-records/{id}     | DELETE | ManageEmployeeRecords claim  | Delete an employee record by ID             |
-
 
 ## Getting Started
 
@@ -89,6 +73,24 @@ MSFD_UserAuthInMemoryApp/
 |- appsettings.json
 |- MSFD_UserAuthInMemoryApp.csproj
 ```
+
+
+## Authorization Patterns
+
+| Pattern        | Description                        | Technology         | Benefits                |
+|---------------|------------------------------------|--------------------|-------------------------|
+| Role-Based     | Restrict access by user role        | Identity Roles     | Simple, scalable        |
+| Claims-Based   | Restrict access by user claim       | Identity Claims    | Fine-grained control    |
+| Policy-Based   | Combine roles/claims for endpoints  | AuthorizationPolicy| Flexible, maintainable  |
+
+## RouteController Endpoints
+
+| Endpoint                        | Method | Authorization                | Description                                 |
+|----------------------------------|--------|------------------------------|---------------------------------------------|
+| /route/employee-records          | GET    | HR role                      | Retrieve all employee records               |
+| /route/employee-records          | POST   | ManageEmployeeRecords claim  | Add a new employee record                   |
+| /route/employee-records/{id}     | DELETE | ManageEmployeeRecords claim  | Delete an employee record by ID             |
+
 
 ## Data Models
 
