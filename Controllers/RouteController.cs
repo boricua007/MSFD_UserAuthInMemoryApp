@@ -27,7 +27,7 @@ namespace MSFD_UserAuthInMemoryApp.Controllers
             return Ok("New employee record added successfully.");
         }
 
-        // DELETE: This endpoint is protected by the "Admin" role, meaning only users with this role can access it.
+        // DELETE: This endpoint is protected by the "ManageEmployeeRecords" policy (claims-based authorization).
         [HttpDelete("route/employee-records/{id}")]
         [Authorize(Policy = "ManageEmployeeRecords")]
         public IActionResult DeleteEmployee(int id)
