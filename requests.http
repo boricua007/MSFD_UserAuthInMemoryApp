@@ -1,0 +1,27 @@
+
+GET http://localhost:5167/route/employee-records
+Accept: application/json
+Cookie: .AspNetCore.Identity.Application=CfDJ8IUEPmHA_K9OpM_njHCbgGkdPYIa_StabrDkx8SJilp_PX5PaMjGke-KY8u72VVwXLCehAAem3M6SbtQqXeb_zUbX-R0WnP-pueM0eLMLKHrFuxc3Bo42psW8SJYhtUt_k0Q1DwftadKxKIEPprohL2xo67IGPAcwov11nAqnK3UfxRMhLnaqdz87aw6Np8LYBo17eMof_oXdnYra6HtSpLgjK6qDgBkTOCwcZxS17f-LFXLz4xiXYdGGu3oAWKa0O7s0mHIRaQ0-kCfIhjznXD38oJ22YZyxeD6_kxQfSa8U_yKPgnngXiPO2GJSxPHRimKPnNJqnJsN4IR0wAcfW534tBAIDREWwx4Rl27HgDHoM9v9Sc8RNF0pjNqHd8p_vwXubq5oaKQiJAHxS1vAOZcXvoNoPiKoVxryrYuJOpeD2fUDMi4dsdVjwthGGEa_hLWG-qrFGGMkB6V3yBk7-_UUD_RqLCbNWlxbw7Iu9HIQsKScYfaOOhDsxrzScHueEQjrNyEgTDgn5-V5nSuJ6DWaoTFUY6siyz1dBnKnjVKbNGWeMEvnp5RkMzcDLYDqmZ7YyoJVvys-xg5jds4xt6B8dGwmwpY1kDn6OCz9YFWucmPfZonbBBFU_2ZchTSt_AFriY5M3D5efY5ta5vz9gpk03oOg3inHycgfCO4dew092g1fMevzepi0zqE2YXPI3KlvBYghwFM4HPexvfncTYkRj279P3sol1cF860iUQSXIT_Og7wOrL8d8Jx_9hgA
+
+
+### Get all employee records (HR role required)
+GET http://localhost:5167/route/employee-records
+Accept: application/json
+
+###
+
+### Add a new employee record (ManageEmployeeRecords claim required)
+POST http://localhost:5167/route/employee-records
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "position": "Developer"
+}
+
+###
+
+### Delete an employee record by ID (ManageEmployeeRecords claim required)
+DELETE http://localhost:5167/route/employee-records/1
+Accept: application/json

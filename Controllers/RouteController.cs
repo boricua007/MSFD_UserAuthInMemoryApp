@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace MSFD_UserAuthInMemoryApp.Controllers
 {
     [Authorize]
+    [ApiController]
+    [Route("route")]
     public class RouteController : Controller
     {
         public IActionResult Index()
@@ -12,7 +14,7 @@ namespace MSFD_UserAuthInMemoryApp.Controllers
         }
 
         // GET:  This endpoint is protected by the "HR" role, meaning only users with this role can access it.
-        [HttpGet("route/employee-records")]
+        [HttpGet("employee-records")]
         [Authorize(Roles = "HR")]
         public IActionResult GetAll()
         {
@@ -20,7 +22,7 @@ namespace MSFD_UserAuthInMemoryApp.Controllers
         }
 
         // POST: This endpoint is protected by the "ManageEmployeeRecords" policy (claims-based authorization).
-        [HttpPost("route/employee-records")]
+        [HttpPost("employee-records")]
         [Authorize(Policy = "ManageEmployeeRecords")]
         public IActionResult AddEmployee()
         {
@@ -28,7 +30,7 @@ namespace MSFD_UserAuthInMemoryApp.Controllers
         }
 
         // DELETE: This endpoint is protected by the "ManageEmployeeRecords" policy (claims-based authorization).
-        [HttpDelete("route/employee-records/{id}")]
+        [HttpDelete("employee-records/{id}")]
         [Authorize(Policy = "ManageEmployeeRecords")]
         public IActionResult DeleteEmployee(int id)
         {
